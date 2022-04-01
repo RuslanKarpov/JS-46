@@ -1,4 +1,4 @@
-//Геолокация
+// Callback функция - пример: Геолокация
 /*
   const onGetPositionSuccess = function (position) {
   console.log('Это вызов onGetPositionSuccess');
@@ -11,3 +11,4 @@ window.navigator.geolocation.getCurrentPosition(
   onGetPositionSuccess,
   onGetPositionError,
 );
+
