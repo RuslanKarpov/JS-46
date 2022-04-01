@@ -11,4 +11,3 @@ window.navigator.geolocation.getCurrentPosition(
   onGetPositionSuccess,
   onGetPositionError,
 );
-*/
