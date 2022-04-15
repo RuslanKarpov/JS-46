@@ -411,7 +411,7 @@ console.log(message);
 // Через for...of
 const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 const loginToFind = 'poly1scute';
-let message = 'Пользователь ${loginToFind не найден.';
+let message = 'Пользователь ${loginToFind} не найден.';
 for (const login of logins) {
   console.log('Ура, равны!!!');
   message = 'Пользователь ${loginToFind найден.';
@@ -420,26 +420,60 @@ for (const login of logins) {
 console.log(message);
 */
 
-//5модуль
-/* 11
-class StringBuilder {
-    constructor(initialValue) {
-        this.value = initialValue;
-    }
-    getValue() {
-        return this.value;
-    }
-    padEnd(str) {
-        this.value = this.value + str;
-    }
-    padStart(str) {
-        this.value = str + this.value;
-    }
-    padBoth(str) {
-        this.value = str + this.value + str;
-    }
+//Метод includes() с тернарным оператором
+/*
+const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+const loginToFind = 'poly1scute';
+
+const message=logins.includes(loginToFind)
+? 'Пользователь ${loginToFind} найден.'
+: 'Пользователь ${loginToFind} не найден.'
+console.log(message);
+*/
+
+/*
+ * Напиши скрипт поиска самого маленького числа в массиве,
+ * при условии что числа уникальные (не повторяются).
+ */
+
+/*const numbers = [51, 18, 13, 24, 7, 85, 19];
+// объявляем переменную
+let smallestNumber = numbers[0];
+
+for (const number of numbers) {
+  if (number < smallestNumber) {
+    smallestNumber = number;
+  }
 }
-12 
+
+console.log('smallestNumber: ', smallestNumber);
+*/
+/*
+ * Напиши скрипт поиска самого большого числа в массиве,
+ * при условии что числа уникальные (не повторяются).
+ */
+
+const numbers = [51, 18, 13, 24, 7, 85, 19];
+// объявляем переменную
+let biggestNumber = numbers[0];
+
+for (const number of numbers) {
+  if (number > biggestNumber) {
+    biggestNumber = number;
+  }
+}
+
+console.log('biggestNumber: ', biggestNumber);
+
+
+
+
+
+
+
+
+
+/*12 
 class Car {
     // Change code below this line
     #brand;
@@ -462,7 +496,7 @@ class Car {
     return this.blacklistedEmails.includes(email);
   }
 
-  16, 17, 2
+  16, 17,
 
   10
 
@@ -490,7 +524,4 @@ static AccessLevel = {
     super(email);
     this.accessLevel = accessLevel;
   }
-
-  
-
-
+*/
