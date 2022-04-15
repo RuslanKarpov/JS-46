@@ -390,6 +390,7 @@ console.log('Total: ', total);
  * - Логика break
  * - Метод includes() с тернарным оператором
  */
+/* через for
 
 const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 const loginToFind = 'poly1scute';
@@ -405,21 +406,91 @@ for (let i=0; i<logins.length; i+=1){
   message='Пользователь ${loginToFind} не найден.';
 }
 console.log(message);
+*/
+/*
+// Через for...of
+const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+const loginToFind = 'poly1scute';
+let message = 'Пользователь ${loginToFind не найден.';
+for (const login of logins) {
+  console.log('Ура, равны!!!');
+  message = 'Пользователь ${loginToFind найден.';
+  break;
+}
+console.log(message);
+*/
+
+//5модуль
+/* 11
+class StringBuilder {
+    constructor(initialValue) {
+        this.value = initialValue;
+    }
+    getValue() {
+        return this.value;
+    }
+    padEnd(str) {
+        this.value = this.value + str;
+    }
+    padStart(str) {
+        this.value = str + this.value;
+    }
+    padBoth(str) {
+        this.value = str + this.value + str;
+    }
+}
+12 
+class Car {
+    // Change code below this line
+    #brand;
+    constructor({ brand, model, price }) {
+      this.#brand = brand;
+      this.model = model;
+      this.price = price;
+    }
+    getBrand() {
+      return this.#brand;
+    }
+    changeBrand(newBrand) {
+      this.#brand = newBrand;
+    }
+    // Change code above this line
+  }
+
+  20
+  isBlacklisted(email) {
+    return this.blacklistedEmails.includes(email);
+  }
+
+  16, 17, 2
+
+  10
+
+  class Storage {
+    constructor(items) {
+        this.items = items;
+    };
+    getItems() {
+        return this.items;
+    }
+    addItem(newItem) {
+        this.items.push(newItem);
+    }
+    removeItem(itemToRemove) {
+        this.items = this.items.filter(item => item !== itemToRemove);
+}
+
+19
+
+static AccessLevel = {
+    BASIC: "basic",
+    SUPERUSER: "superuser",
+  };
+  constructor({email, accessLevel}) {
+    super(email);
+    this.accessLevel = accessLevel;
+  }
+
+  
 
 
-// let message = `Пользователь ${loginToFind} не найден.`;
-// 1 - перебераем
-// for (let i = 0; i < logins.length; i += 1) {
-//   const login = logins[i];
-
-//   console.log('Login: ', login);
-//   console.log(`${login} === ${loginToFind}: `, login === loginToFind);
-
-//   if (login === loginToFind) {
-//     console.log('Ура, равны!!!');
-//     message = `Пользователь ${loginToFind} найден.`;
-//     break;
-//   }
-// }
-
-// console.log(message);
