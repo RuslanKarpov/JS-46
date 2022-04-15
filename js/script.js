@@ -89,7 +89,7 @@ switch (option) {
 console.log(message);
 */
 
-/* ЦИКЛ  *for*  
+/* ЦИКЛ  *for*  - если нужно получить доступ к индексу или изменить значение элемента
 
 for (инициализация; условие; пост- выражение) {
   тело цикла
@@ -194,3 +194,232 @@ if ( payment <=balance) {
 }
 
 console.log("Операция завершена");*/
+
+/* Задача 
+ * Напиши скрипт подсчёта суммы покупки со скидкой в зависимости
+ * от потраченной суммы за всё время (партнёрская программа).
+ *
+ * - Общая сумма потраченного хранится в переменной totalSpent
+ * - Сумма текущего платежа хранится в переменной payment
+ * - Скидка хранится в переменной discount
+ *
+ * - Если потрачено от [100 до 1000) - бронзовый партнёр, скидка 2%
+ * - Если потрачено от [1000 до 5000) - серебрянный партрёр, скидка 5%
+ * - Если потрачено больше [5000 - золотой партрёр, скидка 10%
+ * - Если потрачено меньше 100) - не партнёр, скидка 0%
+ *
+ * - В результате вывести сообщение
+ * «Оформляем заказ на сумму [сумма] со скидкой [скидка]%»
+ */
+/*
+let totalSpent = 2000;
+let payment = 500;
+let discount = 0;
+//2 - Если потрачено от [100 до 1000) - бронзовый партнёр, скидка 2%
+if (totalSpent >= 100 && totalSpent < 1000) {
+  console.log('Бронзовый партнер, скидка 2%');
+  discount = 0.02;
+}
+//Если потрачено от [1000 до 5000) - серебрянный партрёр, скидка 5%
+else if (totalSpent >= 1000 && totalSpent < 5000) {
+  console.log('Серебрянный партнер, скидка 5%');
+  discount = 0.05;
+  //Если потрачено больше [5000 - золотой партрёр, скидка 10%
+} else if (totalSpent >= 5000) {
+  console.log('Золотой партнер, скидка 10%');
+  discount = 0.1;
+} else {
+  console.log('Не партнёр, скидка 0%');
+}
+
+payment -= payment * discount;
+// payment = payment - payment * discount;
+
+//3 - «Оформляем заказ на сумму [сумма] со скидкой [скидка]%»
+console.log(
+  `Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`,
+);
+
+totalSpent += payment;
+
+console.log(`Общая сумма потраченого в магазине: ${totalSpent}`);*/
+
+/*  *********** МАССИВЫ  **********************  */
+/*const friends = [Mango, Kiwi, Poly, Ajax];
+console.log(friends);*/
+/* Первый индекс массива - 0, последний индекс массива - это .lenght-1,
+обращение к индексу массива - 
+console.log(friends[2]);
+изменить индекс массива - 
+friends[1]='Dog';*/
+
+/* Перебор (итерация) массива*/
+/*
+const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+//console.table(friends); - массив в виде таблицы
+// const lastIndex=friends.length-1; 
+for (let i = 0; i <= 3; i += 1){
+  //for (let i = 0; i <= lastIndex; i += 1){
+  console.log(friends[i]);
+}
+*/
+
+/* Метод for ... of  - если не нужно получить доступ к индексу или изменить значение элемента
+
+
+for (const variable of iterable) {
+  // тело цикла
+}
+
+пример:
+const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+for (const friend of friends){
+  console.log(friend);
+}
+*/
+/*
+// Задача 1
+//1-й вариант решения через for
+//Посчитать общую сумму покупок в корзине
+
+const cart = [54, 28, 105, 70, 92, 17, 120];
+//2 - сделать переменнуюобщую total до цикла
+let total = 0;
+
+//1 - перебрать массив
+for (let i = 1; i < cart.length; i += 1){
+  console.log(cart[i]);
+// 3 каждый элемент приплюслвать к total
+  total += cart[i];
+  //total=total+cart[i];
+};
+console.log('Total: ', total);*/
+
+//2-й вариант решения через for...of
+//Посчитать общую сумму покупок в корзине
+/*
+const cart = [54, 28, 105, 70, 92, 17, 120];
+//2 - сделать переменнуюобщую total до цикла
+let total = 0;
+//1 - перебрать массив
+for (const value of cart){
+  total+=value;
+}
+console.log('Total: ', total);*/
+
+// Добавить такс 10%
+
+// for (let i = 0; i < cart.length; i += 1) {
+//   cart[i] = Math.round(cart[i] * 1.1);
+// }
+
+// for (let value of cart) {
+//   value = Math.round(value * 1.1);
+// }
+
+// console.log(cart);
+
+/* Задача 2
+ * Напиши скрипт который подсчитывает сумму всех чётных чисел в массиве.
+ */
+/*
+const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
+// 1 переменная тотал
+let total = 0;
+// 2 перебрать массив
+for (let i = 0; i < numbers.length; i += 1) {
+ const number = numbers[i];
+ console.log(number);
+
+//   // 3 на каждой итерации проверить элемент на чётность
+if (number % 2 === 0) {
+console.log('Четное!!!!');
+
+// 4 если четный плюсуем к тотал
+total += number;
+}
+}
+console.log('Total: ', total);
+*/
+
+/* через  for....of
+
+const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
+// 1 переменная тотал
+let total = 0;
+for (const number of numbers) {
+  if (number % 2 === 0) {
+    console.log('Четное!!!!');
+
+    // 4 если четный плюсуем к тотал
+    total += number;
+  }
+}
+console.log('Total: ', total);
+*/
+
+// for (const number of numbers) {
+//   // console.log(number);
+
+//   if (number % 2 === 0) {
+//     console.log(`${number} - четное!!!!`);
+//     total += number;
+//   }
+// }
+/*
+for (const number of numbers) {
+  if (number % 2 !== 0) {
+    console.log('Эту итерацию нужно пропустить', number);
+    continue;
+  }
+
+  console.log(`${number} - четное!!!!`);
+  total += number;
+}
+
+console.log('Total: ', total);
+*/
+
+/*
+ * Напиши скрипт поиска логина
+ * - Если логина нет, вывести сообщение 'Пользователь [логин] не найден.'
+ * - Если нашли логин, вывести сообщение 'Пользователь [логин] найден.'
+ *
+ * - Сначала через for
+ * - Потом через for...of
+ * - Логика break
+ * - Метод includes() с тернарным оператором
+ */
+
+const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+const loginToFind = 'poly1scute';
+let message = '';
+for (let i=0; i<logins.length; i+=1){
+  const login=logins[i];
+
+ console.log('Login: ', login);
+  if (login===loginToFind){
+  message = 'Пользователь ${loginToFind} найден.';
+  break;
+  }
+  message='Пользователь ${loginToFind} не найден.';
+}
+console.log(message);
+
+
+// let message = `Пользователь ${loginToFind} не найден.`;
+// 1 - перебераем
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
+
+//   console.log('Login: ', login);
+//   console.log(`${login} === ${loginToFind}: `, login === loginToFind);
+
+//   if (login === loginToFind) {
+//     console.log('Ура, равны!!!');
+//     message = `Пользователь ${loginToFind} найден.`;
+//     break;
+//   }
+// }
+
+// console.log(message);
