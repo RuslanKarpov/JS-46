@@ -453,7 +453,7 @@ console.log('smallestNumber: ', smallestNumber);
  * при условии что числа уникальные (не повторяются).
  */
 
-const numbers = [51, 18, 13, 24, 7, 85, 19];
+/*const numbers = [51, 18, 13, 24, 7, 85, 19];
 // объявляем переменную
 let biggestNumber = numbers[0];
 
@@ -464,6 +464,7 @@ for (const number of numbers) {
 }
 
 console.log('biggestNumber: ', biggestNumber);
+*/
 
 
 
@@ -472,25 +473,7 @@ console.log('biggestNumber: ', biggestNumber);
 
 
 
-
-/*12 
-class Car {
-    // Change code below this line
-    #brand;
-    constructor({ brand, model, price }) {
-      this.#brand = brand;
-      this.model = model;
-      this.price = price;
-    }
-    getBrand() {
-      return this.#brand;
-    }
-    changeBrand(newBrand) {
-      this.#brand = newBrand;
-    }
-    // Change code above this line
-  }
-
+/*
   20
   isBlacklisted(email) {
     return this.blacklistedEmails.includes(email);
