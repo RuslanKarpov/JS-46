@@ -15,6 +15,7 @@ window.navigator.geolocation.getCurrentPosition(
 
 
 // SWITCH пример 1
+/*
 const stars = 5;
 let price;
 switch (stars) {
@@ -30,6 +31,7 @@ switch (stars) {
     console.log(`Такого количества звёзд нет`)
 }
 console.log(price);
+*/
 
 // SWITCH пример 2 - объединение
 /*const stars = 5;
