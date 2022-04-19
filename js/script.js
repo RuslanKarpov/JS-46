@@ -15,7 +15,7 @@ window.navigator.geolocation.getCurrentPosition(
 
 
 // SWITCH пример 1
-/*const stars = 5;
+const stars = 5;
 let price;
 switch (stars) {
   case 1:
@@ -29,7 +29,7 @@ switch (stars) {
   default:
     console.log(`Такого количества звёзд нет`)
 }
-console.log(price);*/
+console.log(price);
 
 // SWITCH пример 2 - объединение
 /*const stars = 5;
@@ -464,47 +464,4 @@ for (const number of numbers) {
 }
 
 console.log('biggestNumber: ', biggestNumber);
-*/
-
-
-
-
-
-
-
-
-/*
-  20
-  isBlacklisted(email) {
-    return this.blacklistedEmails.includes(email);
-  }
-
-  16, 17,
-
-  10
-
-  class Storage {
-    constructor(items) {
-        this.items = items;
-    };
-    getItems() {
-        return this.items;
-    }
-    addItem(newItem) {
-        this.items.push(newItem);
-    }
-    removeItem(itemToRemove) {
-        this.items = this.items.filter(item => item !== itemToRemove);
-}
-
-19
-
-static AccessLevel = {
-    BASIC: "basic",
-    SUPERUSER: "superuser",
-  };
-  constructor({email, accessLevel}) {
-    super(email);
-    this.accessLevel = accessLevel;
-  }
 */
