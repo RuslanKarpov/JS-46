@@ -5,7 +5,7 @@
   console.log(position);
 };
 const onGetPositionError = function (error) {
-  console.log(error);
+  console.log(error); 
 };
 window.navigator.geolocation.getCurrentPosition(
   onGetPositionSuccess,
