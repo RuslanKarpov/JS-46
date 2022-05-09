@@ -467,3 +467,24 @@ for (const number of numbers) {
 
 console.log('biggestNumber: ', biggestNumber);
 */
+
+// Прототипы
+
+const objC = {
+  z: 5,
+};
+console.log('objC', objC);
+
+
+const objB = Object.create(objC);
+objB.y = 3;
+console.log('objB', objB);
+// console.log(objC);
+// console.log(objB);
+
+// console.log(objB.y);
+// console.log(objB.z); 
+
+const objA = Object.create(objB);
+objA.x=1
+console.log('objA', objA);

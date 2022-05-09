@@ -1,7 +1,7 @@
-const user = {
-    tag: 'Mango',
-    showTag() {
-        console.log('showTag ->this', this);
-    },
-};
-user.showTag();
+// const user = {
+//     tag: 'Mango',
+//     showTag() {
+//         console.log('showTag ->this', this);
+//     },
+// };
+// user.showTag();
