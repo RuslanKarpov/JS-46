@@ -470,7 +470,7 @@ console.log('biggestNumber: ', biggestNumber);
 
 // Прототипы
 
-const objC = {
+/*const objC = {
   z: 5,
 };
 console.log('objC', objC);
@@ -487,4 +487,42 @@ console.log('objB', objB);
 
 const objA = Object.create(objB);
 objA.x=1
-console.log('objA', objA);
+console.log('objA', objA.z);*/
+
+// const newObj = Object.create({ message: 'Cool' });
+// console.log('newObj', newObj);
+// console.log(newObj.message);
+
+//Классы ООП
+
+const Car = function (config) {
+  console.log(config);
+  
+  this.brand = config.brand;
+  this.model = config.model;
+  this.prise = config.price;
+
+};
+const myCar = new Car({
+  brand: 'Audi',
+  model: 'Q5',
+  price: 35000,
+});
+console.log(myCar);
+
+const myCar2 = new Car({
+  brand: 'BMW',
+  model: 'X6',
+  price: 70000
+});
+console.log(myCar2);
+
+
+
+
+
+
+
+
+
+
