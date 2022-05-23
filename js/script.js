@@ -495,27 +495,27 @@ console.log('objA', objA.z);*/
 
 //Классы ООП
 
-const Car = function (config) {
-  console.log(config);
+// const Car = function (config) {
+//   console.log(config);
   
-  this.brand = config.brand;
-  this.model = config.model;
-  this.prise = config.price;
+//   this.brand = config.brand;
+//   this.model = config.model;
+//   this.prise = config.price;
 
-};
-const myCar = new Car({
-  brand: 'Audi',
-  model: 'Q5',
-  price: 35000,
-});
-console.log(myCar);
+// };
+// const myCar = new Car({
+//   brand: 'Audi',
+//   model: 'Q5',
+//   price: 35000,
+// });
+// console.log(myCar);
 
-const myCar2 = new Car({
-  brand: 'BMW',
-  model: 'X6',
-  price: 70000
-});
-console.log(myCar2);
+// const myCar2 = new Car({
+//   brand: 'BMW',
+//   model: 'X6',
+//   price: 70000
+// });
+// console.log(myCar2);
 
 
 
